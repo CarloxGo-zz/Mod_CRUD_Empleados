@@ -1,0 +1,44 @@
+[
+    {
+        "name": "lichtner/fluentpdo",
+        "version": "1.0.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/lichtner/fluentpdo.git",
+            "reference": "8a34b9c6742544bda9d193e814101cd065d88875"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/lichtner/fluentpdo/zipball/8a34b9c6742544bda9d193e814101cd065d88875",
+            "reference": "8a34b9c6742544bda9d193e814101cd065d88875",
+            "shasum": ""
+        },
+        "time": "2015-02-24 20:50:47",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "files": [
+                "FluentPDO/FluentPDO.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0",
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Marek Lichtner",
+                "homepage": "http://licht.sk/"
+            }
+        ],
+        "description": "FluentPDO is small PHP library for rapid query building. Killer feature is smart join builder which generates joins automatically.",
+        "homepage": "http://fluentpdo.com/",
+        "keywords": [
+            "database",
+            "dbal",
+            "pdo"
+        ]
+    }
+]

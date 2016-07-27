@@ -1,0 +1,26 @@
+<h2 class="page-header">
+    {{ model.Nombre }}
+</h2>
+
+<a href="#/" class="btn btn-default btn-block">Volver</a>
+
+<dl>
+    <dt>Nombre</dt>
+    <dd>{{ model.Nombre }}</dd>
+    <dt>Apellido</dt>
+    <dd>{{ model.Apellido }}</dd>
+    <dt>Sexo</dt>
+    
+    <dd ng-if="model.Sexo == 1">Hombre</dd>
+    <dd ng-if="model.Sexo == 2">Mujer</dd>
+    
+    
+    <dt>Sueldo</dt>
+    <dd>{{ model.Sueldo }}</dd>
+    <dt>Profesion</dt>
+    <dd>{{ model.Profesion }}</dd>
+    <dt>Fecha Nacimiento</dt>
+    <dd>{{ model.FechaNacimiento }}</dd>
+    <dt>Fecha Registro</dt>
+    <dd>{{ model.FechaRegistro }}</dd>
+</dl>

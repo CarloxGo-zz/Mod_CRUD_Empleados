@@ -1,0 +1,59 @@
+<form ng-submit="registrar()">
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Correo" ng-model="Correo" ng-required="true">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Nombre" ng-model="Nombre" ng-required="true">
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Apellido" ng-model="Apellido" ng-required="true">
+    </div>
+    <div class="form-group">
+        <select ng-model="Sexo" class="form-control">
+            <option value="1">Hombre</option>
+            <option value="2">Mujer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="Sueldo" ng-model="Sueldo" ng-required="true">
+    </div>
+    <div class="form-group">
+        <select ng-model="Profesion_id" class="form-control">
+            <option ng-repeat="p in profesiones" value="{{ p.id }}">{{ p.Nombre }}</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="text" class="form-control" placeholder="FechaNacimiento" ng-model="FechaNacimiento" ng-required="true">
+    </div>
+    <button type="submit" class="btn btn-default btn-block">Agregar</button>
+</form>
+
+<hr />
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Listado de empleados
+  </div>
+    <table class="table table-bordered">
+        <tr ng-repeat="m in model">
+            <td>{{m.Correo}}</td>
+            <td>{{m.Nombre}}</td>
+            <td>{{m.Apellido}}</td>
+            
+            <td ng-if="m.Sexo == 1">Hombre</td>
+            <td ng-if="m.Sexo == 2">Mujer</td>
+                        
+            <td>{{m.Sueldo}}</td>
+            <td>{{m.Profesion}}</td>
+            <td>{{m.FechaNacimiento}}</td>
+            <td>
+                <a class="btn btn-default btn-xs" href="#/ver/{{m.id}}">
+                    <i class="glyphicon glyphicon-eye-open"></i>
+                </a>
+                <button class="btn btn-danger btn-xs" ng-click="retirar(m.id)">
+                    <i class="glyphicon glyphicon-trash"></i>
+                </button>
+            </td>
+        </tr>
+    </table>
+</div>
